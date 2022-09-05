@@ -1,10 +1,10 @@
-package web.dao;
+package com.crud_study.crud_3_1_1.dao;
 
 
-
+import com.crud_study.crud_3_1_1.model.User;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
-import web.model.User;
+
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;

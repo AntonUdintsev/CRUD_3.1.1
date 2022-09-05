@@ -1,10 +1,9 @@
-package web.service;
+package com.crud_study.crud_3_1_1.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.crud_study.crud_3_1_1.dao.UserDao;
+import com.crud_study.crud_3_1_1.model.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import web.dao.UserDao;
-import web.model.User;
 
 import java.util.List;
 @Service

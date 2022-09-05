@@ -1,4 +1,4 @@
-package web.model;
+package com.crud_study.crud_3_1_1.model;
 
 
 import javax.persistence.*;

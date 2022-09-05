@@ -15,9 +15,9 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item" th:text="|Имя: ${user.getUserName()}|"/>
                 <li class="list-group-item" th:text="|Фамлия: ${user.getUserSurname()}|"/>
-                <a th:href="@{/users/{id}/edit(id=${user.getId()})}">Редактировать</a>
+                <a th:href="@{/{id}/edit(id=${user.getId()})}">Редактировать</a>
 
-                <form th:method="DELETE" th:action="@{/users/{id}(id=${user.getId()})}">
+                <form th:method="DELETE" th:action="@{/{id}(id=${user.getId()})}">
                     <input type="submit" value="Delete"/>
                 </form>
             </ul>
@@ -26,7 +26,7 @@
 </div>
 
 
-<form th:method="GET" th:action="@{/users/new}">
+<form th:method="GET" th:action="@{/new}">
     <input type="submit" value="Добавить нового пользователя"/>
 </form>
 

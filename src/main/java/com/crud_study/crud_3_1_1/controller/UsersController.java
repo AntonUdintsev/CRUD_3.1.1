@@ -1,16 +1,14 @@
-package web.controller;
+package com.crud_study.crud_3_1_1.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.crud_study.crud_3_1_1.model.User;
+import com.crud_study.crud_3_1_1.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-import web.service.UserService;
-import web.service.UserServiceImpl;
-import web.model.User;
 
 
 @Controller
-@RequestMapping(value = "/users")
+//@RequestMapping(value = "/users") test
 public class UsersController {
 	private final UserService userService;
 
@@ -32,7 +30,7 @@ public class UsersController {
 	@PostMapping ()
 	public  String createUser (@ModelAttribute("user") User user) {
 		userService.addUser(user);
-		return "redirect:/users";
+		return "redirect:/";
 	}
 
 	@GetMapping (value = "/{id}")
@@ -49,12 +47,12 @@ public class UsersController {
 	@PatchMapping (value = "/{id}")
 	public String updateUser (@ModelAttribute("user") User user, @PathVariable("id") int id){
 		userService.updateUser(id,user);
-		return "redirect:/users";
+		return "redirect:/";
 	}
 	@DeleteMapping (value = "/{id}")
 	public String deleteUser (@PathVariable ("id") int id) {
 		userService.deleteUser(id);
-		return "redirect:/users";
+		return "redirect:/";
 	}
 
 }
